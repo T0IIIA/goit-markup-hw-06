@@ -62,11 +62,19 @@ a {
 
 .container {
   width: 100%;
-  width: 1158px;
+  width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
+
+/* .container {
+  width: 100%;
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+} */
 
 /*=================================HEADER===================================*/ 
 .header {
