@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoIT hw-06</title>
+    <title>WebStudio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -18,13 +18,13 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container container-header">
         <nav class="nav">
           <a href="./index.html" class="logo"
             >Web<span class="logo-span">Studio</span></a
           >
-          <ul class="container-header">
+          <ul class="container-header-list">
             <li>
               <a href="./index.html" class="header-link current">Studio</a>
             </li>
@@ -34,7 +34,7 @@
         </nav>
 
         <address class="address">
-          <ul class="container-header">
+          <ul class="container-header-list">
             <li>
               <a href="mailto:info@devstudio.com" class="address-link"
                 >info@devstudio.com</a
@@ -47,8 +47,80 @@
             </li>
           </ul>
         </address>
+
+        <button type="button" class="open-menu-btn">
+          <svg class="icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="header-modal-menu is-open">
+        <button type="button" class="modal-menu-close">
+          <svg class="icon-close" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <ul class="header-menu-list">
+          <li><a href="./index.html" class="header-link">Studio</a></li>
+          <li><a href="" class="header-link">Portfolio</a></li>
+          <li><a href="" class="header-link">Contacts</a></li>
+        </ul>
+
+        <ul class="menu-address-list">
+          <li>
+            <a href="tel:+110001111111" class="address-link"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li>
+            <a href="mailto:info@devstudio.com" class="address-link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="menu-icon-list">
+          <li class="icon-item">
+            <a
+              href="https://www.instagram.com/"
+              class="icon-link"
+              target="_blank"
+            >
+              <svg class="icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-item">
+            <a href="https://twitter.com/" class="icon-link" target="_blank">
+              <svg class="icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-item">
+            <a
+              href="https://www.facebook.com/"
+              class="icon-link"
+              target="_blank"
+            >
+              <svg class="icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-item">
+            <a href="https://linkedin.com/" class="icon-link" target="_blank">
+              <svg class="icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
     <main>
       <section class="hero">
@@ -121,7 +193,10 @@
             <li class="our-team-item">
               <img
                 src="./images/our_team/person1.jpg"
-                srcset="./images/our_team/person1.jpg 1x, ./images/our_team/person1_2x.jpg 2x"
+                srcset="
+                  ./images/our_team/person1.jpg    1x,
+                  ./images/our_team/person1_2x.jpg 2x
+                "
                 alt="one person-man"
                 width="264"
                 height="260"
@@ -180,7 +255,10 @@
             <li class="our-team-item">
               <img
                 src="./images/our_team/person2.jpg"
-                srcset="./images/our_team/person2.jpg 1x, ./images/our_team/person2_2x.jpg 2x"
+                srcset="
+                  ./images/our_team/person2.jpg    1x,
+                  ./images/our_team/person2_2x.jpg 2x
+                "
                 alt="one person-man"
                 width="264"
                 height="260"
@@ -239,7 +317,10 @@
             <li class="our-team-item">
               <img
                 src="./images/our_team/person3.jpg"
-                srcset="./images/our_team/person3.jpg 1x, ./images/our_team/person3_2x.jpg 2x"
+                srcset="
+                  ./images/our_team/person3.jpg    1x,
+                  ./images/our_team/person3_2x.jpg 2x
+                "
                 alt="one person-woman"
                 width="264"
                 height="260"
@@ -298,7 +379,10 @@
             <li class="our-team-item">
               <img
                 src="./images/our_team/person4.jpg"
-                srcset="./images/our_team/person4.jpg 1x, ./images/our_team/person4_2x.jpg 2x"
+                srcset="
+                  ./images/our_team/person4.jpg    1x,
+                  ./images/our_team/person4_2x.jpg 2x
+                "
                 alt="one person-man"
                 width="264"
                 height="260"
@@ -373,7 +457,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 768px) and (max-width: 1157px)"
                     srcset="
                       ./images/portfolio/banking_app_tab.jpg    1x,
                       ./images/portfolio/banking_app_tab_2x.jpg 2x
@@ -416,7 +500,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 768px) and (max-width: 1157px)"
                     srcset="
                       ./images/portfolio/cashless_payment_tab.jpg    1x,
                       ./images/portfolio/cashless_payment_tab_2x.jpg 2x
@@ -459,7 +543,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 768px) and (max-width: 1157px)"
                     srcset="
                       ./images/portfolio/meditation_app_tab.jpg    1x,
                       ./images/portfolio/meditation_app_tab_2x.jpg 2x
@@ -503,7 +587,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 768px) and (max-width: 1157px)"
                     srcset="
                       ./images/portfolio/taxi_service_tab.jpg    1x,
                       ./images/portfolio/taxi_service_tab_2x.jpg 2x
@@ -546,7 +630,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 768px) and (max-width: 1157px)"
                     srcset="
                       ./images/portfolio/screen_illustrations_tab.jpg  1x,
                       images/portfolio/screen_illustrations_tab_2x.jpg 2x
@@ -589,7 +673,7 @@
                     "
                   />
                   <source
-                    media="(min-width: 768px)"
+                    media="(min-width: 768px) and (max-width: 1157px)"
                     srcset="
                       ./images/portfolio/online_courses_tab.jpg    1x,
                       ./images/portfolio/online_courses_tab_2x.jpg 2x
@@ -703,7 +787,7 @@
       </div>
     </footer>
 
-    <!-- <div class="backdrop no-open">
+    <div class="backdrop no-open">
       <div class="modal">
         <button type="button" class="modal-close">
           <svg class="icon-close" width="8" height="8">
@@ -793,6 +877,6 @@
           <button type="submit" class="button">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
   </body>
 </html>

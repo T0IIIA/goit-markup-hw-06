@@ -103,7 +103,7 @@ a {
       max-width: 1158px;
       padding-left: 15px;
       padding-right: 15px;
-}
+  }
 
   h1 {
     margin: 0 auto 48px;
@@ -112,7 +112,6 @@ a {
 }
 /*=================================HEADER===================================*/ 
 .header {
-  display: flex;
   border-bottom: 1px solid #e7e9fc; 
   box-shadow: 
     0px 1px 6px 0px rgba(46, 47, 66, 0.08),
@@ -122,9 +121,13 @@ a {
 
 .container-header {
   display: flex;
-  gap: 40px;
   align-items: center;
-  flex-shrink: 0;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.container-header-list, .address{
+  display: none;
 }
 
 .nav {
@@ -141,7 +144,6 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   flex-shrink: 0;
-  margin-right: 76px;
 }
 
 .logo-span, .logo-span-footer {        /* <<<< FOOTER */
@@ -183,16 +185,9 @@ a {
   color: #404BBF;
 }
 
-.address {
-  font-style: normal;
-  margin-left: auto;
-}
-
 .address-link {
   display: block;
   color: #434455;
-  padding-top: 24px;
-  padding-bottom: 24px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -201,11 +196,173 @@ a {
   color: #404BBF;
 }
 
+.open-menu-btn {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.open-menu-btn svg {
+  fill: #2F2F37;
+}
+
+ /* -----------------------MODAL MENU------------------------- */
+.header-modal-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 360px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding: 71px 24px 40px 16px;
+  background-color: #F4F4FD;
+  z-index: 999;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 
+      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-menu-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  padding: 0;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid #E7E9FC;
+  border-radius: 50%;
+  fill: #2E2F42;
+  transition: 
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-menu-close:hover,
+.modal-menu-close:focus {
+  background-color: #E7E9FC;
+  border: none;
+}
+
+.modal-menu-close:active {
+  background-color: transparent;
+  fill: #2E2F42;
+  border: 1px solid #E7E9FC;
+}
+
+.header-menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-bottom: auto;
+}
+
+.header-menu-list .header-link {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+
+.menu-address-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin-bottom: 48px;
+}
+
+.menu-address-list .address-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.menu-icon-list {
+  display: flex;
+  column-gap: 40px;
+}
+
 /* -------------------min-width: 768px------------------- */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+.container-header {
+  padding: 0 16px;
+}
+
+.header-modal-menu {
+  display: none;
+}
+
+.container-header-list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.address .container-header-list {
+  flex-direction: column;
+}
+
+.address {
+  display: block;
+  font-style: normal;
+  margin-left: auto;
+}
+
+.address-link {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.logo {
+  margin-right: 120px;
+}
+
+  .open-menu-btn {
+    display: none;
+  }
+}
 
 /* -------------------min-width: 1158px------------------ */
-@media screen and (min-width: 1158px) {}
+@media screen and (min-width: 1158px) {
+  .container-header {
+      padding: 0 15px;
+    }
+
+  .container-header-list {
+    margin-left: auto;
+  }
+
+  .address .container-header-list {
+    flex-direction: row;
+  }
+
+  .address-link {
+    padding-bottom: 24px;
+    padding-top: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .logo {
+    margin-right: 76px;
+  }
+
+}
 
 /*=================================SECTION-1=====================================*/
 .hero {
@@ -500,11 +657,11 @@ a {
 @media screen and (min-width: 1158px) {
   .our-team {
     background-color: #F4F4FD;
-    padding: 120px 0;
+    padding: 120px 0px;
   }
 
   .our-team .container {
-    padding: 0;
+    padding: 0 15px;
   }
 
   .our-team-item {
@@ -713,11 +870,11 @@ text-align: center;
   .container-footer {
     padding: 96px 108px;
     justify-content: flex-start;
+    column-gap: 24px;
   }
 
   .footer-logo {
     align-items: flex-start;
-    margin-right: 24px;
   }
 
   .footer-title, .subscribe-email {
@@ -731,7 +888,7 @@ text-align: center;
 /* -------------------min-width: 1158px------------------ */
 @media screen and (min-width: 1158px) {
   .container-footer {
-    padding: 100px 0;
+    padding: 100px 15px;
   }
 
   .footer-logo {
@@ -760,14 +917,13 @@ text-align: center;
 
 .modal {
   background-color: #FCFCFC;
-  padding: 24px;
-  padding-top: 72px;
+  padding: 72px 16px 24px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   border-radius: 4px;
   background: #FCFCFC;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
@@ -871,15 +1027,12 @@ color: #2E2F42;
 }
 
 .modal-textarea {
-  display: block;
   height: 120px;
-  min-width: 100%;
   padding: 8px 16px;
   resize: none;
   line-height: 117%;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
-  background-color: transparent;
 }
 
 .modal-textarea::placeholder {
@@ -936,6 +1089,12 @@ color: #2E2F42;
 
 /* -------------------min-width: 768px------------------- */
 @media screen and (min-width: 768px) {
+  .modal {
+    padding: 72px 24px 24px;
+    width: 408px;
+    min-height: 584px;
+  }
+
 
 }
 /* -------------------min-width: 1158px------------------ */
