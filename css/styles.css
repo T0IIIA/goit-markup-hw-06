@@ -391,7 +391,6 @@ a {
 
 .button {
   display: block;
-  padding: auto;
   background-color: #4D5AE5;
   color: #FFF;
   font-family: inherit;
@@ -489,7 +488,7 @@ a {
 }
 
 .second-class-item .subtitle {
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 /* -------------------min-width: 768px------------------- */
@@ -547,7 +546,7 @@ a {
   }
 
     .second-class-item .subtitle {
-      font-weight: 400px;
+      font-weight: 400;
     }
 
 }
