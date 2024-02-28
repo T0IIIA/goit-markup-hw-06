@@ -201,7 +201,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 100wh;
   height: 100vh;
   position: fixed;
   top: 0;
